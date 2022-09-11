@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container disable">
+        <h2>Photo Lab. </h2>
+        <p>EDIT SOMETHING NEW</p>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Tools</label>
+                    <div class="options">
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brighteness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="https://cdn.pixabay.com/photo/2018/04/03/04/36/hand-3285912_960_720.jpg" alt="preview-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Upload.</button>
+                <button class="save-img">Save.</button>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
